@@ -27,7 +27,7 @@ int main(){
 
 
 
-    // max(x,y);
+     max(x,y);
 
 
 
