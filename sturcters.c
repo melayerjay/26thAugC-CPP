@@ -2,15 +2,17 @@
 
 #include<stdio.h>
 
-struct Employee{
+typedef struct Employee{
     int emp_no;
     char name[20];
     float salary;
-};
+}emp;
 
 // int a;
-struct Employee a;
+emp a;
 struct Employee arr[5];
+
+//bool flag;
 
 void getData(){
     printf("\nEnter ID:");
