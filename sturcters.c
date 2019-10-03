@@ -16,7 +16,7 @@ struct Employee arr[5];
 
 void getData(){
     printf("\nEnter ID:");
-    scanf("%d",&a.emp_no);
+    scanf("%d",&a.emp_no);  
     printf("\nEnter Name:");
     scanf("%s",&a.name);
     printf("\nEnter Salary:");
