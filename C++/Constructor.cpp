@@ -34,29 +34,36 @@ class Box{
             cout<<"Object Destroyred";
         }
 
-        void printBox(){
-            cout<<"\nDimensions are: "<<length<<"\t"<<breadth<<"\t"<<height<<"\n";
-        }
+        friend void printBox(Box);
 
-        Box add(Box a,Box b){
+        friend Box add(Box ,Box);
+};
+
+void printBox(Box temp){
+            cout<<"\nDimensions are: "<<temp.length<<"\t"<<temp.breadth<<"\t"<<temp.height<<"\n";
+}   
+
+Box add(Box a,Box b){
             Box temp;
             temp.length = a.length + b.length;
             temp.breadth = a.breadth + b.breadth;
             temp.height = a.height + b.height;
             
             return temp;
-        }
-};
-
+}
 
 int main(){
 
-    Box b1;
+    Box sum;
+    Box b1(10,20,30),b2(10,20,30);
 
-    Box b2(10,20,30);
+    printBox(b1);
+    printBox(b2);
+   // b2.printBox();
 
-    b1.printBox();
-    b2.printBox();
+    sum = add(b1,b2);
 
+   // sum.printBox();
+    printBox(sum);
     return 0;
 }
